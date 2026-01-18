@@ -1,7 +1,6 @@
 import app from "./app.js";
 import { env, connectDb, disconnectDb } from "@/config/index.js";
 import { logger } from "@/utils/index.js";
-import { Server } from "node:http";
 
 const startServer = async () => {
   await connectDb();

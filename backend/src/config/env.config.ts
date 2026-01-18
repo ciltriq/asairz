@@ -5,7 +5,7 @@ export const env = {
   get PORT() {
     return Number(process.env.PORT);
   },
-  get PROSSGRESS_URL() {
+  get DATABASE_URL() {
     return process.env.DATABASE_URL;
   },
   get JWT_ACCESS_SECRET() {

@@ -21,7 +21,7 @@ export const validateEnv = () => {
   if (!env.PORT) {
     throw new Error("PORT is not defined in the environment variables");
   }
-  if (!env.PROSSGRESS_URL) {
+  if (!env.DATABASE_URL) {
     throw new Error("PROSSGRESS_URL is not defined in the environment variables");
   }
   if (!env.JWT_ACCESS_SECRET) {
