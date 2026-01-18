@@ -5,6 +5,7 @@ import {
   useState,
 } from "react";
 import type { ReactNode } from "react";
+import { APP_CONSTANTS } from "@/constant/app";
 
 export type AdminInterface = {
   id: string;
@@ -23,7 +24,7 @@ type AuthContextType = {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-const AUTH_STORAGE_KEY = "admin_auth";
+const AUTH_STORAGE_KEY = APP_CONSTANTS.AUTH_STORAGE_KEY;
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [admin, setAdmin] = useState<AdminInterface | null>(null);

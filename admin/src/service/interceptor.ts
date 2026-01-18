@@ -2,7 +2,9 @@
 import { AxiosError } from "axios";
 import type { AxiosInstance, InternalAxiosRequestConfig } from "axios";
 
-const AUTH_STORAGE_KEY = "admin_auth";
+import { APP_CONSTANTS } from "@/constant/app";
+
+const AUTH_STORAGE_KEY = APP_CONSTANTS.AUTH_STORAGE_KEY;
 
 export const setupInterceptors = (
   api: AxiosInstance,
