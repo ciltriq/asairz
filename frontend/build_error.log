@@ -1,0 +1,57 @@
+
+> frontend@0.1.0 build
+> next build
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /home/vava/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /home/vava/Programming/asairz/asairz/frontend/package-lock.json
+
+▲ Next.js 16.1.3 (Turbopack)
+
+  Creating an optimized production build ...
+Error: Can't resolve '../styles/hero.css' in '/home/vava/Programming/asairz/asairz/frontend/app'
+    [2m[at finishWithoutResolve (/home/vava/Programming/asairz/asairz/frontend/node_modules/enhanced-resolve/lib/Resolver.js:565:18)][0m
+    [2m[at /home/vava/Programming/asairz/asairz/frontend/node_modules/enhanced-resolve/lib/Resolver.js:657:14][0m
+    [2m[at /home/vava/Programming/asairz/asairz/frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5][0m
+    [2m[at eval (eval at create (/home/vava/Programming/asairz/asairz/frontend/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/vava/Programming/asairz/asairz/frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5][0m
+    [2m[at eval (eval at create (/home/vava/Programming/asairz/asairz/frontend/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:27:1)][0m
+    [2m[at /home/vava/Programming/asairz/asairz/frontend/node_modules/enhanced-resolve/lib/DescriptionFilePlugin.js:89:43][0m
+    [2m[at /home/vava/Programming/asairz/asairz/frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5][0m
+    [2m[at eval (eval at create (/home/vava/Programming/asairz/asairz/frontend/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /home/vava/Programming/asairz/asairz/frontend/node_modules/enhanced-resolve/lib/Resolver.js:718:5][0m {
+  details: "resolve '../styles/hero.css' in '/home/vava/Programming/asairz/asairz/frontend/app'\n" +
+    '  using description file: /home/vava/Programming/asairz/asairz/frontend/package.json (relative path: ./app)\n' +
+    '    using description file: /home/vava/Programming/asairz/asairz/frontend/package.json (relative path: ./styles/hero.css)\n' +
+    '      no extension\n' +
+    "        /home/vava/Programming/asairz/asairz/frontend/styles/hero.css doesn't exist\n" +
+    '      .css\n' +
+    "        /home/vava/Programming/asairz/asairz/frontend/styles/hero.css.css doesn't exist\n" +
+    '      as directory\n' +
+    "        /home/vava/Programming/asairz/asairz/frontend/styles/hero.css doesn't exist"
+}
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./Programming/asairz/asairz/frontend/app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: /home/vava/Programming/asairz/asairz/frontend/app/globals.css:1:1: Can't resolve '../styles/hero.css' in '/home/vava/Programming/asairz/asairz/frontend/app'
+    at Input.error (Programming/asairz/asairz/frontend/node_modules/postcss/lib/input.js:135:16) [/home/vava/Programming/asairz/asairz/frontend/.next/build/chunks/02840_4338ea0b._.js:4651:22]
+    at Root.error (Programming/asairz/asairz/frontend/node_modules/postcss/lib/node.js:146:32) [/home/vava/Programming/asairz/asairz/frontend/.next/build/chunks/02840_4338ea0b._.js:928:38]
+    [at Object.Once (/home/vava/Programming/asairz/asairz/frontend/node_modules/@tailwindcss/postcss/dist/index.js:10:6911)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:105:5)]
+    at async LazyResult.runAsync (Programming/asairz/asairz/frontend/node_modules/postcss/lib/lazy-result.js:293:11) [/home/vava/Programming/asairz/asairz/frontend/.next/build/chunks/02840_4338ea0b._.js:6206:21]
+    at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34) [/home/vava/Programming/asairz/asairz/frontend/.next/build/chunks/[root-of-the-server]__ed0113bb._.js:146:36]
+    at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23) [/home/vava/Programming/asairz/asairz/frontend/.next/build/chunks/[root-of-the-server]__a3d65e73._.js:443:31]
+
+Import trace:
+  Client Component Browser:
+    ./Programming/asairz/asairz/frontend/app/globals.css [Client Component Browser]
+    ./Programming/asairz/asairz/frontend/app/layout.tsx [Server Component]
+
+
+    at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34) [/home/vava/Programming/asairz/asairz/frontend/.next/build/chunks/[root-of-the-server]__ed0113bb._.js:146:36])
+    at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23) [/home/vava/Programming/asairz/asairz/frontend/.next/build/chunks/[root-of-the-server]__a3d65e73._.js:443:31])

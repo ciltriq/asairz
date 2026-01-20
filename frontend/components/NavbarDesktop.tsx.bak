@@ -1,0 +1,66 @@
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
+
+export default function NavbarDesktop() {
+    return (
+        <nav className="fixed top-0 left-0 right-0 z-50 md:py-4 md:px-6 transition-all duration-300">
+            <div className="w-full md:max-w-[95%] mx-auto bg-white md:bg-black/20 md:backdrop-blur-md md:border md:border-white/5 rounded-none md:rounded-full px-6 py-4 md:px-8 md:py-3 flex items-center justify-between shadow-sm md:shadow-lg md:hover:bg-black/30 transition-all border-b md:border-b-0 border-gray-100">
+
+                {/* Logo Section */}
+                <div className="flex items-center gap-3">
+                    <div className="relative w-10 h-10">
+                        <Image
+                            src="/logo.png"
+                            alt="Asairz Logo"
+                            fill
+                            className="object-contain drop-shadow-md"
+                            priority
+                        />
+                    </div>
+                    <div className="relative w-24 h-6">
+                        <Image
+                            src="/logotext.png"
+                            alt="Asairz"
+                            fill
+                            className="object-contain drop-shadow-md md:invert md:brightness-0 md:brightness-200" // Ensure text is white on desktop, black on mobile
+                            priority
+                        />
+                    </div>
+                </div>
+
+                {/* Navigation Links */}
+                <div className="hidden md:flex items-center gap-8">
+                    {['Home', 'Shop', 'Collections', 'About'].map((item) => (
+                        <Link
+                            key={item}
+                            href="#"
+                            className="text-sm font-medium text-white/90 hover:text-white transition-colors relative group tracking-wide"
+                        >
+                            {item}
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
+                        </Link>
+                    ))}
+                </div>
+
+                {/* Right Actions */}
+                <div className="hidden md:flex items-center gap-4">
+                    <button className="p-2 text-white/90 hover:text-white hover:bg-white/10 rounded-full transition-all">
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                    <button className="p-2 text-white/90 hover:text-white hover:bg-white/10 rounded-full transition-all">
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                    </button>
+                    <div className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-xs font-bold text-white cursor-pointer hover:bg-white/20 transition-colors">
+                        JD
+                    </div>
+                </div>
+            </div>
+        </nav>
+    );
+}
